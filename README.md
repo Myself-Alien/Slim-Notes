@@ -20,54 +20,13 @@ Frontend: React, Axios, Bootstrap
 
 Other: CORS, REST APIs
 
-⚡️ Install and Run
-1️⃣ Clone the repo
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/note-app.git
-cd note-app
-2️⃣ Install backend dependencies
-bash
-Copy
-Edit
-cd backend
-npm install
-3️⃣ Start backend
-bash
-Copy
-Edit
-npm run dev
-4️⃣ Install frontend dependencies
-bash
-Copy
-Edit
-cd ../frontend
-npm install
-5️⃣ Start frontend
-bash
-Copy
-Edit
-npm start
-🌐 Usage
-✅ Open your browser and visit:
 
-arduino
-Copy
-Edit
-http://localhost:3000
 ✅ You can:
-
 Add new notes
-
 Edit existing notes
-
 Delete unwanted notes
-
 See timestamps when a note was created
 
-👇 Demo Screenshot
-(Add a screenshot of your app here!)
 
 👥 Contributing
 Pull requests are welcome!
