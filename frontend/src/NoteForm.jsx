@@ -47,11 +47,11 @@ function NoteForm({ selectedNote, setSelectedNote, fetchNotes }) {
         required
       />
       <div className='d-grid'>
-        <button type="submit" className='btn btn-primary mt-2'>{selectedNote ? 'Update' : 'Add'}</button>
+        <button type="submit" className='btn btn-warning mt-2'>{selectedNote ? 'Update' : 'Add'}</button>
         {selectedNote && (
           <button
             type="button"
-            className='btn btn-primary mt-2'
+            className='btn btn-warning mt-2'
             onClick={() => {
               setSelectedNote(null);
               setTitle('');

@@ -2,12 +2,28 @@
   font-family: RobotoMedium;
   src: url(./fonts/Roboto_Condensed-Medium.ttf);
 }
+@font-face {
+  font-family: RobotoBold;
+  src: url(./fonts/Roboto_SemiCondensed-Bold.ttf);
+}
+@font-face {
+  font-family: RobotoLight;
+  src: url(./fonts/Roboto_Condensed-Light.ttf);
+}
 .App {
   text-align: center;
-  background-color: #F5F0CD;
+  background-color: #f5f0cd;
+}
+.footer {
+  background-color: #578fca;
+}
+.roboto_bold {
+  font-family: RobotoBold;
+}
+.roboto_light {
   font-family: RobotoMedium;
 }
-.footer
+.card
 {
-  background-color: #578FCA;
+  background-color: #FADA7A !important;
 }
