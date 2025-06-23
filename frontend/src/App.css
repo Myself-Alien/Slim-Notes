@@ -1,6 +1,11 @@
+@font-face {
+  font-family: RobotoMedium;
+  src: url(./fonts/Roboto_Condensed-Medium.ttf);
+}
 .App {
   text-align: center;
   background-color: #F5F0CD;
+  font-family: RobotoMedium;
 }
 .footer
 {
