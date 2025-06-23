@@ -20,29 +20,6 @@ Frontend: React, Axios, Bootstrap
 
 Other: CORS, REST APIs
 
-📁 Folder Structure
-pgsql
-Copy
-Edit
-note-app/
-├─ backend/
-│  ├─ server.js
-│  └─ routes/
-│     └─ noteRoutes.js
-│  └─ models/
-│     └─ Note.js
-├─ frontend/
-│  └─ src/
-│     └─ App.js, NoteForm.js
-├─ .gitignore
-├─ package.json
-├─ README.md
-✅ Getting Started
-Prerequisites
-Node.js and npm
-
-MongoDB installed and running locally
-
 ⚡️ Install and Run
 1️⃣ Clone the repo
 bash
