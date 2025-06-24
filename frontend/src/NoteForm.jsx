@@ -30,7 +30,7 @@ function NoteForm({ selectedNote, setSelectedNote, fetchNotes }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className='col-md-4 offset-md-4 mt-2'>
+    <form onSubmit={handleSubmit}>
       <h5>{selectedNote ? 'Edit Note' : 'Add Note'}</h5>
       <input
         className='form-control'
@@ -40,14 +40,14 @@ function NoteForm({ selectedNote, setSelectedNote, fetchNotes }) {
         required
       />
       <textarea
-        className='form-control mt-2'
-        placeholder="Content"
+        className='form-control mt-2 content'
+        placeholder="Add your note"
         value={content}
         onChange={(e) => setContent(e.target.value)}
         required
       />
       <div className='d-grid'>
-        <button type="submit" className='btn btn-warning mt-2'>{selectedNote ? 'Update' : 'Add'}</button>
+        <button type="submit" className='btn btn-warning mt-2' data-bs-dismiss="modal">{selectedNote ? 'Update' : 'Add'}</button>
         {selectedNote && (
           <button
             type="button"

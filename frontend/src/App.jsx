@@ -3,7 +3,6 @@ import axios from 'axios';
 import NoteForm from './NoteForm';
 import './App.css';
 import Footer from './Footer';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -26,13 +25,40 @@ function App() {
   };
 
   return (
-    <div className='App container-fluid g-0'>
-      <h1 className='roboto_bold'><FontAwesomeIcon icon="fa-solid fa-file-pen" /> Slim Notes</h1>
-      <NoteForm
-        selectedNote={selectedNote}
-        setSelectedNote={setSelectedNote}
-        fetchNotes={fetchNotes}
-      />
+    <div className='container-fluid g-0'>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-md-6'>
+            <h1 className='roboto_bold'>Slim Notes</h1>
+          </div>
+          <div className='col-md-6'>
+            <button type="button" classNameName="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Launch demo modal
+            </button>
+          </div>
+        </div>
+
+        <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              {/* 
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            */}
+              <div className="modal-body">
+                <NoteForm
+                  selectedNote={selectedNote}
+                  setSelectedNote={setSelectedNote}
+                  fetchNotes={fetchNotes}
+                />
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="container">
         <div className="row">
           {notes.map((note) => (
@@ -47,6 +73,7 @@ function App() {
                   <div className="mt-3">
 
                     <button
+                      data-bs-toggle="modal" data-bs-target="#exampleModal"
                       className="btn btn-sm btn-primary me-2"
                       onClick={() => setSelectedNote(note)}
                     >
