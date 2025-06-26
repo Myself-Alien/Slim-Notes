@@ -3,6 +3,8 @@ import axios from 'axios';
 import NoteForm from './NoteForm';
 import './App.css';
 import Footer from './Footer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faFilePen, faTrash } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -26,19 +28,18 @@ function App() {
 
   return (
     <div className='container-fluid g-0'>
-      <div className='container'>
+      <div className='container top_space'>
         <div className='row'>
-          <div className='col-md-6'>
+          <div className='col-md-6 col-sm-6'>
             <h1 className='roboto_bold'>Slim Notes</h1>
           </div>
-          <div className='col-md-6'>
-            <button type="button" classNameName="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              Launch demo modal
+          <div className='col-md-6 col-sm-6'>
+            <button type="button" className="plus_btn btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <FontAwesomeIcon icon={faPlus} />
             </button>
           </div>
         </div>
-
-        <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div className="modal-dialog">
             <div className="modal-content">
               {/* 
@@ -54,7 +55,6 @@ function App() {
                   fetchNotes={fetchNotes}
                 />
               </div>
-
             </div>
           </div>
         </div>
@@ -62,28 +62,27 @@ function App() {
       <div className="container">
         <div className="row">
           {notes.map((note) => (
-            <div className="col-md-4 col-sm-6 mt-3" key={note._id}>
+            <div className="col-md-3 col-sm-6 mt-3" key={note._id}>
               <div className="card h-100">
                 <div className="card-body">
-                  <h5 className="card-title roboto_light">{note.title}</h5>
+                  <h5 className="card-title roboto_bold">{note.title}</h5>
                   <p className="card-text roboto_light">{note.content}</p>
                   <small className="text-muted">
                     Created: {new Date(note.createdAt).toLocaleString()}
                   </small>
                   <div className="mt-3">
-
                     <button
                       data-bs-toggle="modal" data-bs-target="#exampleModal"
-                      className="btn btn-sm btn-primary me-2"
+                      className="btn btn-sm btn-secondary card_btn me-2"
                       onClick={() => setSelectedNote(note)}
                     >
-                      Edit
+                      <FontAwesomeIcon icon={faFilePen} /> Edit
                     </button>
                     <button
-                      className="btn btn-sm btn-danger"
+                      className="btn btn-sm btn-secondary card_btn"
                       onClick={() => deleteNote(note._id)}
                     >
-                      Delete
+                      <FontAwesomeIcon icon={faTrash} /> Delete
                     </button>
                   </div>
                 </div>
@@ -94,7 +93,6 @@ function App() {
       </div>
       <Footer />
     </div>
-
   );
 }
 export default App;

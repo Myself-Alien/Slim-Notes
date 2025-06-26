@@ -1,28 +1,41 @@
 @font-face {
-  font-family: RobotoMedium;
-  src: url(./fonts/Roboto_Condensed-Medium.ttf);
+  font-family: RobotoRegular;
+  src: url(./fonts/Roboto-Regular.ttf);
 }
 @font-face {
-  font-family: RobotoBold;
-  src: url(./fonts/Roboto_SemiCondensed-Bold.ttf);
+  font-family: RobotoBlack;
+  src: url(./fonts/Roboto-Black.ttf);
 }
 @font-face {
   font-family: RobotoLight;
-  src: url(./fonts/Roboto_Condensed-Light.ttf);
+  src: url(./fonts/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: RobotoThin;
+  src: url(./fonts/Roboto-Thin.ttf);
+}
+.roboto_black {
+  font-family: RobotoBold;
+}
+.roboto_light {
+  font-family: RobotoLight;
+}
+.roboto_thin
+{
+  font-family: RobotoThin;
+}
+.roboto_regular
+{
+  font-family: RobotoRegular;
 }
 .App {
   text-align: left;
   /* background-color: #f5f0cd; */
 }
 .footer {
-  background-color: #3674B5;
-  color: #fff;
-}
-.roboto_bold {
-  font-family: RobotoBold;
-}
-.roboto_light {
-  font-family: RobotoMedium;
+  background-color: #FBDB93;
+  color: #000;
+  text-align: center;
 }
 .card
 {
@@ -33,4 +46,18 @@
 .content
 {
   height: 100px;
+}
+.plus_btn
+{
+  float:right !important;
+}
+.top_space
+{
+  margin-top: 20px;
+}
+.card_btn
+{
+  background-color:inherit !important;
+  border: none !important;
+  color: #000 !important;
 }
