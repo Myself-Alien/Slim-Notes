@@ -2,6 +2,9 @@
 A simple, clean, and fully-functional Note-Taking App built with the MERN Stack:
 ✅ MongoDB, Express.js, React, and Node.js.
 
+![slim](https://github.com/user-attachments/assets/575fb260-49b6-4ec4-ad5d-81f0bea97c43)
+
+
 🚀 Features
 ✏️ Create, Read, Update, and Delete (CRUD) notes
 
